@@ -235,3 +235,21 @@ This is a single-paper peer review, not a literature survey. Do not use this ski
 - **Subagent results are plain text**. Parse each subagent's final message as a JSON array directly; strip markdown fences if the subagent added them despite instructions.
 - **The `id` field is a bare arXiv id** (e.g. `1706.03762`), not a URL and not with a version suffix. `abs_url` / `pdf_url` hold the full URLs if you need them.
 - **Synthesis, not listing**. The final report must identify themes and compare findings across papers. A report that only lists papers one after another is a failure mode — if you cannot find themes, say so explicitly instead of faking them.
+
+## 来源与本地修改
+
+原始来源：[ByteDance DeerFlow · systematic-literature-review](https://github.com/bytedance/deer-flow/blob/6469833886487a71c25d17b6b543ecab9b0defca/skills/public/systematic-literature-review/SKILL.md)。本仓库由 `ss00sxt` 维护该 skill 的本地修改版；两个评测 JSON 和三份引文模板与核对基准逐字一致。
+
+相对核对基准的已有修改：
+
+- 适配历史 Kimi Code 运行环境：将子任务调用、返回解析和并发批次安排改为 `Agent` / `AgentSwarm` 约定，并调整本地脚本路径、报告输出路径和交付方式。
+- 2026-09-15：在 DeerFlow 的 `scripts/arxiv_search.py` 基础上加入 429/5xx 与网络错误的指数退避、随机抖动、数值 `Retry-After` 读取，并为 urllib 后备实现保留响应头。
+- 2026-09-17：增加 arXiv 限流或服务/网络中断后的备用检索，要求通过官方会议页、出版社或 DOI 核实顶会/顶刊来源；保留“正常零结果或数量不足不得填充”的边界，并要求记录检索与核实方法。
+
+重试设计参考：[Google DeepMind science-skills · literature-search-arxiv](https://github.com/google-deepmind/science-skills/tree/68832757cbbf941c620b71df5756cf6e5cc287b0/skills/literature_search_arxiv)。该 skill 使用 `polite-http` 客户端；本地客户端以其退避与重试设计为参考进行实现。该参考项目采用 Apache-2.0，完整文本附于 [LICENSE.science-skills](LICENSE.science-skills)；参考文件的版权声明为 `Copyright 2026 Google LLC`。
+
+2026-10-12：追加本来源说明并保留上述上游许可文本。
+
+来源依据：本地 skills 安装记录登记来源为 `bytedance/deer-flow`，安装日期为 2026-09-14。DeerFlow 来源链接采用安装时间前最近一次上游提交 `6469833886487a71c25d17b6b543ecab9b0defca` 作为核对基准；安装记录未保存精确提交号，因此该基准不等同于已确认的安装版本。
+
+上游原始内容采用 MIT 许可，版权归 Bytedance Ltd. and/or its affiliates 及 DeerFlow Authors；完整版权与许可文本保留于 [LICENSE.deer-flow](LICENSE.deer-flow)。

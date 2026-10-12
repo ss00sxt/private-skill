@@ -313,3 +313,18 @@ Before finalizing the review, verify:
 - Adapt the review depth to the user's needs: a brief assessment for quick triage versus a full review for submission preparation
 - When reviewing multiple papers comparatively, maintain consistent criteria across all reviews
 - Always disclose limitations of your review (e.g., "I could not verify the proofs in Appendix B in detail")
+
+## 来源与本地修改
+
+原始来源：[ByteDance DeerFlow · academic-paper-review](https://github.com/bytedance/deer-flow/blob/6469833886487a71c25d17b6b543ecab9b0defca/skills/public/academic-paper-review/SKILL.md)。本仓库由 `ss00sxt` 维护该 skill 的本地修改版。
+
+相对核对基准的已有修改：
+
+- 将报告输出改为当前工作目录，并直接告知保存路径，适配本地使用方式。
+- 2026-09-16：新增“可推演的方法流水线”要求，明确处理单元、初始状态、参数及锚点、前向过程、损失与参数更新、训练与推理差异；同步补充报告模板章节和质量检查项。
+
+2026-10-12：追加本来源说明并保留上游许可文本。
+
+来源依据：本地 skills 安装记录登记来源为 `bytedance/deer-flow`，安装日期为 2026-09-14。DeerFlow 来源链接采用安装时间前最近一次上游提交 `6469833886487a71c25d17b6b543ecab9b0defca` 作为核对基准；安装记录未保存精确提交号，因此该基准不等同于已确认的安装版本。
+
+上游原始内容采用 MIT 许可，版权归 Bytedance Ltd. and/or its affiliates 及 DeerFlow Authors；完整版权与许可文本保留于 [LICENSE.deer-flow](LICENSE.deer-flow)。

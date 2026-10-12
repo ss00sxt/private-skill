@@ -164,3 +164,15 @@ The architecture uses LangGraph for workflow orchestration [citation:LangGraph D
 The project gained 10,000 stars within 3 months of launch.
 The architecture uses LangGraph for workflow orchestration.
 ```
+
+## 来源与本地修改
+
+原始来源：[ByteDance DeerFlow · github-deep-research](https://github.com/bytedance/deer-flow/blob/6469833886487a71c25d17b6b543ecab9b0defca/skills/public/github-deep-research/SKILL.md)。本仓库由 `ss00sxt` 归档维护。
+
+版本性质：原样复用。补充本节前，`SKILL.md`、`assets/report_template.md` 和 `scripts/github_api.py` 三个文件均与核对基准逐字一致，未发现本地功能修改。
+
+2026-10-12：仅追加本来源说明并保留上游许可文本。
+
+来源依据：本地 skills 安装记录登记来源为 `bytedance/deer-flow`，安装日期为 2026-09-14。DeerFlow 来源链接采用安装时间前最近一次上游提交 `6469833886487a71c25d17b6b543ecab9b0defca` 作为核对基准；安装记录未保存精确提交号，因此该基准不等同于已确认的安装版本。
+
+上游原始内容采用 MIT 许可，版权归 Bytedance Ltd. and/or its affiliates 及 DeerFlow Authors；完整版权与许可文本保留于 [LICENSE.deer-flow](LICENSE.deer-flow)。
